@@ -2,6 +2,21 @@
 <html>
   <head><meta charset="utf-8"><title>Injection Test</title></head>
   <body>
-    <p>Global EV sales increased 27% in 2024 to 30.2 million units.</p>
+    <p>
+    This is a controlled diff demo page for the Yureeka pipeline. It exists only to validate that URL injection,
+    fetching, deterministic number extraction, and Diff Panel V2 all work end-to-end. The statements below are
+    intentionally simple and written in plain text so the scraper and extractor can reliably detect values, units,
+    and nearby semantic cues like “global”, “sales”, “market share”, and forecast horizons.
+    </p>
+    
+    <p>
+    Global EV sales increased 27% in 2024 to 30.2 million units.    
+    By 2030, global EV sales are projected to reach 40.7 million units, representing a 42% market share.
+    </p>
+    
+    <p>
+    For a diff test, change only ONE number between runs (for example, change “18.5” to “20.0”) while keeping
+    the rest of the text the same. Do not remove text, and keep the units the same (“million units”).
+    </p>
   </body>
 </html>
