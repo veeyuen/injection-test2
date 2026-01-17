@@ -1,34 +1,45 @@
 <!doctype html>
+
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>Injection Diff Guarantee Page</title>
+  <title>Injection Diff Guarantee Page (FIX2D2Y)</title>
 </head>
 <body>
-  <h1>Injected Current Metrics (Diff Guarantee)</h1>
-  <p id="marker">INJECTION_DIFF_GUARANTEE_2026_01_16</p>
+  <h1>Injected Current Metrics (Guaranteed Diff Activation)</h1>
 
-  <!-- Match Analysis canonical intent: 2024_global_ev_sales__unknown -->
-  <p><strong>2024 Global EV Sales:</strong> 18.5 million units</p>
-  <p>Global electric vehicle sales in 2024 were 18.5 million units.</p>
+  <!-- IMPORTANT: marker contains NO numbers to avoid year-token capture -->
 
-  <!-- Match Analysis canonical intent: market_share_2024__percent -->
-  <p><strong>Market Share (2024):</strong> 20.1%</p>
-  <p>EV market share in 2024 was 20.1% of the light-vehicle market.</p>
+  <p id="marker">INJECTION_DIFF_GUARANTEE_FIX2D2Y_V1</p>
 
-  <!-- Match Analysis canonical intent: revenue_2026__currency -->
-  <p><strong>Revenue (2026):</strong> US$ 1020.0 bn</p>
-  <p>Global EV market revenue in 2026 is projected at US$ 1020.0 billion (US$ 1020.0 bn).</p>
+  <h2>Exact baseline-aligned metrics</h2>
 
-  <!-- Match Analysis canonical intent: china_2024_sales__unknown -->
-  <p><strong>China 2024 Sales:</strong> 11.8 million units</p>
-  <p>China electric vehicle sales in 2024 were 11.8 million units.</p>
+  <!-- Matches: market_size_2026__currency -->
 
-  <!-- Extra binding context (safe, helps scoring) -->
+  <p><strong>Global EV market size (2026):</strong> US$ 1,020.0 billion</p>
+  <p>In 2026, the global electric vehicle (EV) market size is estimated at US$ 1,020.0 billion (US$ 1,020.0 bn).</p>
+
+  <!-- Matches: expected_cagr_2026_2030__percent -->
+
+  <p><strong>Expected CAGR (2026–2030):</strong> 3.1%</p>
+  <p>The expected compound annual growth rate (CAGR) from 2026 to 2030 is 3.1%.</p>
+
+  <!-- Matches: market_share_2030__percent -->
+
+  <p><strong>EV market share (2030):</strong> 45.0%</p>
+  <p>By 2030, EV market share is 45.0% of the light-vehicle market.</p>
+
+  <!-- Matches: units_sold_2030__unit_sales -->
+
+  <p><strong>Units sold (2030):</strong> 33.0 million units</p>
+  <p>In 2030, units sold are projected to reach 33.0 million units.</p>
+
+  <h2>Extra binding hints (safe)</h2>
   <p style="display:none">
-    global worldwide china 2024 2026
-    electric vehicle EV sales market share revenue
-    million units percent % US$ USD bn billion
+    global EV electric vehicle market size revenue value USD US$ billion bn
+    expected CAGR compound annual growth rate 2026 2030 percent %
+    market share penetration share of market
+    units sold unit sales million units
   </p>
 </body>
 </html>
